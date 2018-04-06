@@ -1,0 +1,316 @@
+﻿@model IEnumerable<ShoesShop.Models.Shoes>
+
+@{
+    ViewBag.Title = "Shops";
+}
+
+@section Styles{
+    <!-- Owl-carousel-CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Content/Css/jquery-ui1.css">    
+}
+
+<div class="ads-grid_shop">
+    <div class="shop_inner_inf">
+        <!-- tittle heading -->
+        <!-- //tittle heading -->
+        <!-- product left -->
+        <div class="side-bar col-md-3">
+            <div class="search-hotel">
+                <h3 class="agileits-sear-head">Search Here..</h3>
+                <form action="#" method="post">
+                    <input type="search" placeholder="Product name..." name="search" required="">
+                    <input type="submit" value=" ">
+                </form>
+            </div>
+            <!-- price range -->
+            <div class="range">
+                <h3 class="agileits-sear-head">Price range</h3>
+                <ul class="dropdown-menu6">
+                    <li>
+
+                        <div id="slider-range"></div>
+                        <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
+                    </li>
+                </ul>
+            </div>
+            <!-- //price range -->
+            <!--preference -->
+            <div class="left-side">
+                <h3 class="agileits-sear-head">Occasion</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Casuals</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Party</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Wedding</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Ethnic</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- // preference -->
+            <!-- discounts -->
+            <div class="left-side">
+                <h3 class="agileits-sear-head">Discount</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">5% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">10% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">20% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">30% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">50% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">60% or More</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //discounts -->
+            <!-- reviews -->
+            <div class="customer-rev left-side">
+                <h3 class="agileits-sear-head">Customer Review</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span>5.0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>4.0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>3.5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>3.0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>2.5</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //reviews -->
+            <!-- deals -->
+            <div class="deal-leftmk left-side">
+                <h3 class="agileits-sear-head">Special Deals</h3>
+
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/Content/Images/s4.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Shuberry Heels</h3>
+                        <a href="single.html">$180.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/Content/Images/s2.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Chikku Loafers</h3>
+                        <a href="single.html">$99.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/Content/Images/s1.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Bella Toes</h3>
+                        <a href="single.html">$165.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/Content/Images/s5.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Red Bellies</h3>
+                        <a href="single.html">$225.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/Content/Images/s3.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>(SRV) Sneakers</h3>
+                        <a href="single.html">$169.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- //deals -->
+
+        </div>
+        <!-- //product left -->
+        <!-- product right -->
+        <div class="left-ads-display col-md-9">
+            <div class="wrapper_top_shop">
+                <div class="col-md-6 shop_left">
+                    <img src="~/Content/Images/banner3.jpg" alt="">
+                    <h6>40% off</h6>
+                </div>
+                <div class="col-md-6 shop_right">
+                    <img src="~/Content/Images/banner2.jpg" alt="">
+                    <h6>50% off</h6>
+                </div>
+                <div class="clearfix"></div>
+                <!-- product-sec1 -->
+                <div class="product-sec1">
+                    <!--/mens-->
+                    @foreach (var shoe in Model)
+                    {
+                        <div class="col-md-4 product-men">
+                            <div class="product-shoe-info shoe">
+                                <div class="men-pro-item">
+                                    <div class="men-thumb-item">
+                                        <img src="~/Content/Images/@shoe.Image" alt="">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="@Url.Action("Details", "Shoes", new { id = shoe.ID })" class="link-product-add-cart">Quick View</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">New</span>
+                                    </div>
+                                    <div class="item-info-product">
+                                        <h4>
+                                            @Html.ActionLink(shoe.ShoeName, "Details", new { id = shoe.ID })
+                                        </h4>
+                                        <div class="info-product-price">
+                                            <div class="grid_meta">
+                                                <div class="product_price">
+                                                    <div class="grid-price ">
+                                                        <span class="money ">@shoe.Price</span>
+                                                    </div>
+                                                </div>
+                                                <ul class="stars">
+                                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="shoe single-item hvr-outline-out">
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="shoe_item" value="Bella Toes">
+                                                    <input type="hidden" name="amount" value="675.00">
+                                                    <button type="submit" class="shoe-cart pshoe-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!-- //mens -->
+                    <div class="clearfix"></div>
+
+                </div>
+
+                <!-- //product-sec1 -->
+                <div class="col-md-6 shop_left shp">
+                    <img src="~/Content/Images/banner4.jpg" alt="">
+                    <h6>21% off</h6>
+                </div>
+                <div class="col-md-6 shop_right shp">
+                    <img src="~/Content/Images/banner1.jpg" alt="">
+                    <h6>31% off</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+@section Scripts{
+    <!-- price range (top products) -->
+    <script src="~/scripts/jquery-ui.js"></script>
+    <script>
+		    //<![CDATA[
+		    $(window).load(function () {
+			    $("#slider-range").slider({
+				    range: true,
+				    min: 0,
+				    max: 9000,
+				    values: [50, 6000],
+				    slide: function (event, ui) {
+					    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+				    }
+			    });
+			    $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+		    }); //]]>
+    </script>
+    <!-- //price range (top products) -->   
+
+}
