@@ -15,12 +15,13 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-[Xx]64/
-[Xx]86/
-[Bb]uild/
+
+x64/
+x86/
 bld/
 [Bb]in/
 [Oo]bj/
+[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -40,10 +41,11 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
-# DNX
+# .NET Core
 project.lock.json
+project.fragment.lock.json
 artifacts/
-
+**/Properties/launchSettings.json
 *_i.c
 *_p.c
 *_i.h
@@ -81,6 +83,7 @@ ipch/
 *.sdf
 *.cachefile
 *.VC.db
+*.VC.VC.opendb
 
 # Visual Studio profiler
 *.psess
